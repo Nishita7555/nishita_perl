@@ -1,0 +1,49 @@
+Code Project Discussion Forums in Perl
+* Created By Hassan on Aug., 28, 2001
+__________________________________________________________________________
+* This can be modifyied and re-distrubted. All changes should be reported to me !
+* Check for newer versions !
+* Future releases will include a admin section.
+* You can change it the way you like and add features.
+   Please let me know of all the new features you add. Then i can update it !
+__________________________________________________________________________
+BETA 1. Written with Perl 5.
+Tested under Apache for Win32.
+Doesn't use a database but newer releases will use mySQL database.
+This board is currently under testing phase.
+Report any bugs or comments to qammer2010@yahoo.com
+__________________________________________________________________________
+1.  Install.txt	  - The necessary Install Instructions (This file)
+2.  forum.pl           - The Perl CGI script that runs everything.
+3.  forum.html       - The HTML file where the messages will be shown to the users.
+4.  data.txt	          - Where the file number is stored.
+5.  messages/	  - Where the reply messages will be stored.
+6.  img/		  - Where the emotion icons are located.
+7.  mouse.js          - Contains the functions.
+8.  global.css         - The CSS File.
+9.  new.html          - The form for a new message.
+__________________________________________________________________________
+FORUM.PL
+===========
+This file must be placed in your server's cgi-bin. The file must also be chmoded 755. Ask your system administrator for more information on either the cgi-bin or chmod command. This is the most complicated file you will need to modify.  It comes with a lot of variables and many options.  Below is a summary of how to configure all of the variables and what the options do:
+___________________________________________________________________________
+FORUM.HTML
+==========
+
+forum.html must be placed in the directory that you defined in $basedir of your forum.pl file.  It must be chmoded 777 so that your web server's uid (User ID) has permission to write to this file. This file needs much less editing than the forum.pl script. <form method=POST action="http://your.host.xxx/cgi-bin/forum.pl"> You need to change the URL that is in action="" to the same URL that you defined in forum.pl as $cgi_url. Once you have made these changes you can exit this file and save it.
+___________________________________________________________________________
+MESSAGES/
+=========
+This is a directory that should also be placed in $basedir as defined in forum.pl.  This directory must be chmoded 777 so that messages can be written into it by the server's UID. The messages directory will contains the forms for the reply.
+___________________________________________________________________________
+DATA.TXT
+========
+Simply place this file into $basedir as defined in forum.pl and chmod it 777 so that the web server can write an incremented number to it. This is where the file name number will be kept.
+___________________________________________________________________________
+Install.txt:
+=======
+Install.txt is this file. It gives you instructions on how to install the forums. You may delete it after but it's good to keep it for reference.
+___________________________________________________________________________
+CREDITS
+=======
+The discussion forum was created by me. The discussion forums were completly written from scratch. The forums are CodeProject's.
